@@ -1,3 +1,3 @@
-import component from "./component_2.vue";
+import component from "./component_4.vue";
 
 export default component;

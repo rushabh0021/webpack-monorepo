@@ -1,12 +1,12 @@
 <template>
     <div>
-<h1>This is COmponent 2</h1>
+<h1>This is Component 3</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name: "component-3",
+        name: "my-component_3",
         
     }
 </script>

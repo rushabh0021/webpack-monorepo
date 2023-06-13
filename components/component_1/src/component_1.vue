@@ -1,15 +1,23 @@
 <template>
-    <div>
-<h1>This is COmponent 1</h1>
-    </div>
+  <div>
+    <p class="bold">This is Component 1</p>
+    <p>My name is {{ name }}</p>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "component_1",
-    }
+export default {
+  name: "my-component_1",
+  data() {
+    return {
+        name: "rushabh",
+    };
+  },
+};
 </script>
 
 <style lang="css">
-
+    .bold {
+        font-weight: 600;
+    }
 </style>

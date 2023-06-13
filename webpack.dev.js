@@ -3,7 +3,7 @@ const baseConfig = require("./webpack.config");
 const path = require("path");
 const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
-const HTMLWebpackDeployPlugin = require("html-webpack-deploy-plugin");
+const HtmlWebpackDeployPlugin = require("html-webpack-deploy-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 
 /* const isDirectoryPresent = (componentName) => {
@@ -12,7 +12,7 @@ const { VueLoaderPlugin } = require("vue-loader");
 module.exports = (env) => {
     console.log(env);
     const componentPrefix = "my-";
-    const port = 9001;
+    const port = 9002;
     const componentDirectory = `./components/${env.directoryName}`;
 
     return {
@@ -22,14 +22,14 @@ module.exports = (env) => {
             context: path.resolve(componentDirectory),
             entry: path.resolve(`./components/${env.directoryName}/src/index.js`),
             output: {
-                path: path.resolve(`./components/${env.directoryName}/.temp`),
+                path: path.resolve(`./components/${env.directoryName}/.temp/`),
                 filename: `${componentPrefix}${env.directoryName}.js`,
                 library: `${componentPrefix}${env.directoryName}`,
                 libraryTarget: "umd",
                 umdNamedDefine: true,
             },
             externals: {
-                vue: "vue",
+                Vue: "Vue",
             },
             devtool: "source-map",
             devServer: {
@@ -46,7 +46,7 @@ module.exports = (env) => {
             plugins: [
                 new VueLoaderPlugin(),
                 new HTMLWebpackPlugin(),
-                new HTMLWebpackDeployPlugin({
+                new HtmlWebpackDeployPlugin({
                     useAssetsPath: false,
                     assets: {
                         copy: [

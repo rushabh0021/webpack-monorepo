@@ -1,9 +1,18 @@
 const path = require("path");
 
-const { VueLoaderPlugin }  = require("vue-loader");
+const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
-/*     entry: "./src/main.js", */
+    mode: "none",
+    context: path.resolve(__dirname, "./"),
+    externals: {
+        Vue: "Vue",
+    },
+    resolve: {
+        extensions: [".vue", ".js", ".json"],
+        mainFields: ["browser", "main"],
+        modules: ["node_modules"],
+    },
     module: {
         rules: [
             {
@@ -16,7 +25,7 @@ module.exports = {
                 loader: "babel-loader",
                 options: {
                     presets: [
-                        ["@babel/preset-env", {targets : "defaults" }]
+                        ["@babel/preset-env", { targets: "defaults" }]
                     ]
                 }
             },
@@ -26,22 +35,26 @@ module.exports = {
                     "vue-style-loader",
                     "css-loader"
                 ]
-            }
+            },
+           /*  {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader",
+                        options: {
+                            sources: {
+                                list: [
+                                    { tag: "img", attribute: "src", type: "src" },
+                                    { tag: "input", attribute: "src", type: "src" },
+                                    { tag: "object", attribute: "data", type: "src" },
+                                ],
+                            },
+                        },
+                    },
+                ],
+            } ,*/
         ]
     },
-   /*  output: {
-        path: path.join(__dirname, "dist"),
-        filename: "bundle.js",
-        publicPath: "/dist"
-    }, */
-  /*   devServer: {
-        static: {
-            directory: path.join(__dirname, "public"),
-            watch: true,
-        },
-        port: 9001,
-        compress: true,
-    }, */
     plugins: [
         new VueLoaderPlugin()
     ],
