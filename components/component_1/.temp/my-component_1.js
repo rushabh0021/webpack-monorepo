@@ -254,7 +254,7 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", [_c("p", {
     staticClass: "bold"
-  }, [_vm._v("This is Component 1")]), _vm._v(" "), _c("p", [_vm._v("My name is " + _vm._s(_vm.name))])]);
+  }, [_vm._v("This is Component 1 updated")]), _vm._v(" "), _c("p", [_vm._v("My name is " + _vm._s(_vm.name))])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -282,7 +282,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.bold {\n    font-weight: 600;\n}\n", "",{"version":3,"sources":["webpack://./../../src/component_1.vue"],"names":[],"mappings":";AAuBA;IACA,gBAAA;AACA","sourcesContent":["<template>\r\n  <div>\r\n    <p class=\"bold\">This is Component 1</p>\r\n    <p>My name is {{ name }}</p>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: \"my-component_1\",\r\n  data() {\r\n    return {\r\n        name: \"rushabh\",\r\n    };\r\n  },\r\n};\r\n</script>\r\n\r\n<style lang=\"css\">\r\n    .bold {\r\n        font-weight: 600;\r\n    }\r\n</style>"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.bold {\n    font-weight: 600;\n}\n", "",{"version":3,"sources":["webpack://./../../src/component_1.vue"],"names":[],"mappings":";AAuBA;IACA,gBAAA;AACA","sourcesContent":["<template>\r\n  <div>\r\n    <p class=\"bold\">This is Component 1 updated</p>\r\n    <p>My name is {{ name }}</p>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: \"my-component_1\",\r\n  data() {\r\n    return {\r\n        name: \"rushabh\",\r\n    };\r\n  },\r\n};\r\n</script>\r\n\r\n<style lang=\"css\">\r\n    .bold {\r\n        font-weight: 600;\r\n    }\r\n</style>"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -13297,7 +13297,7 @@ module.exports.formatError = function (err) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("9a190e801ce15e0eea5e")
+/******/ 		__webpack_require__.h = () => ("c220b9b0603db7dce92b")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="bold">This is Component 1</p>
+    <p class="bold">This is Component 1 updated</p>
     <p>My name is {{ name }}</p>
   </div>
 </template>

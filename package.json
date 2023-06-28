@@ -6,8 +6,7 @@
   "author": "Rushabh Modi",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "build": "node --max-old-space-size=8192 scripts/build.js",
     "serve": "node --max-old-space-size=8192 scripts/serve.js"
   },
   "dependencies": {

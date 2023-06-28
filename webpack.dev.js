@@ -1,14 +1,10 @@
 
 const baseConfig = require("./webpack.config");
 const path = require("path");
-const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackDeployPlugin = require("html-webpack-deploy-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 
-/* const isDirectoryPresent = (componentName) => {
-
-} */
 module.exports = (env) => {
     console.log(env);
     const componentPrefix = "my-";
@@ -61,7 +57,7 @@ module.exports = (env) => {
                         ],
                         scripts: [
                             {
-                                append: false,
+                                append: true,
                                 variableName: "Vue",
                                 path: "vue.js",
                             },

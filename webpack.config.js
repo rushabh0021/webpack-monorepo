@@ -4,14 +4,8 @@ const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
     mode: "none",
-    context: path.resolve(__dirname, "./"),
     externals: {
         Vue: "Vue",
-    },
-    resolve: {
-        extensions: [".vue", ".js", ".json"],
-        mainFields: ["browser", "main"],
-        modules: ["node_modules"],
     },
     module: {
         rules: [
