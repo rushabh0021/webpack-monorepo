@@ -1,3 +1,3 @@
 echo "component publish job start"
-yarn
-yarn build all
+call yarn
+call yarn build all
